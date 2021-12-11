@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/provider.dart';
 
 import 'auth.dart';
+import 'home.dart';
 
-void main() async {
+void main() {
   runApp(const App());
 }
 

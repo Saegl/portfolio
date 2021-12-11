@@ -13,10 +13,6 @@ class Repository {
   //
 
   String? loginStudent(Student student) {
-    // if(!studentList.contains(student)) {
-    //   return 'such student do not exist';
-    // }
-
     _student = student;
     _student.setGeneralInfo = hardcodedGeneralInfo;
     return null;
@@ -35,5 +31,15 @@ class Repository {
     return _student.generalInfo!;
   }
 
+  void updateBlock(int id, Block b) {
+    _student.updateBlock(id, b);
+  }
 
+  void addBlock(Block b) {
+    _student.addBlock = b;
+  }
+
+  List<Block> getBlocks() {
+    return _student.blocks;
+  }
 }

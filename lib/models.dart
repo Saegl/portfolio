@@ -2,7 +2,7 @@ class Student {
   String studId;
   String password;
   GeneralInfo? generalInfo;
-  List<Section> sections = [];
+  List<Block> blocks = [];
 
   Student(this.studId, this.password, {this.generalInfo});
 
@@ -10,8 +10,12 @@ class Student {
     generalInfo = genInf;
   }
 
-  set addSection(Section s) {
-    sections.add(s);
+  set addBlock(Block s) {
+    blocks.add(s);
+  }
+
+  void updateBlock(int id, Block b) {
+    blocks[id] = b;
   }
 }
 
@@ -31,18 +35,9 @@ class GeneralInfo {
   });
 }
 
-class Section {
-  String name;
-  List<Block> blocks = [];
-  Section(this.name);
-
-  set addBlock(Block b) {
-    blocks.add(b);
-  }
-}
-
 class Block {
   String name;
+  String title;
   String description;
-  Block(this.name, this.description);
+  Block(this.name, this.title, this.description);
 }
