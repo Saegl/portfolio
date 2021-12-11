@@ -13,9 +13,9 @@ class Repository {
   //
 
   String? loginStudent(Student student) {
-    if(!studentList.contains(student)) {
-      return 'such student do not exist';
-    }
+    // if(!studentList.contains(student)) {
+    //   return 'such student do not exist';
+    // }
 
     _student = student;
     _student.setGeneralInfo = hardcodedGeneralInfo;
